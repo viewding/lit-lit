@@ -9,7 +9,7 @@ import type {Directive, DirectiveResult, PartInfo} from './directive.js';
 
 const DEV_MODE = true;
 const ENABLE_EXTRA_SECURITY_HOOKS = true;
-const ENABLE_SHADYDOM_NOPATCH = true;
+//const ENABLE_SHADYDOM_NOPATCH = true;  // viewding不再支持shadydom的兼容性。
 const NODE_MODE = false;
 
 // Allows minifiers to rename references to globalThis
@@ -233,12 +233,14 @@ if (DEV_MODE) {
   );
 }
 
-const wrap =
-  ENABLE_SHADYDOM_NOPATCH &&
-  global.ShadyDOM?.inUse &&
-  global.ShadyDOM?.noPatch === true
-    ? (global.ShadyDOM!.wrap as <T extends Node>(node: T) => T)
-    : <T extends Node>(node: T) => node;
+// const wrap =
+//   ENABLE_SHADYDOM_NOPATCH &&
+//   global.ShadyDOM?.inUse &&
+//   global.ShadyDOM?.noPatch === true
+//     ? (global.ShadyDOM!.wrap as <T extends Node>(node: T) => T)
+//     : <T extends Node>(node: T) => node;
+
+const wrap = <T extends Node>(node: T) => node;  // viewding不再支持shadydom的兼容性。
 
 const trustedTypes = (global as unknown as Window).trustedTypes;
 

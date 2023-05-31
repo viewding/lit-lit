@@ -17,14 +17,15 @@ const {_ChildPart: ChildPart} = _$LH;
 
 type ChildPart = InstanceType<typeof ChildPart>;
 
-const ENABLE_SHADYDOM_NOPATCH = true;
+// const ENABLE_SHADYDOM_NOPATCH = true;
 
-const wrap =
-  ENABLE_SHADYDOM_NOPATCH &&
-  window.ShadyDOM?.inUse &&
-  window.ShadyDOM?.noPatch === true
-    ? window.ShadyDOM!.wrap
-    : (node: Node) => node;
+// const wrap =
+//   ENABLE_SHADYDOM_NOPATCH &&
+//   window.ShadyDOM?.inUse &&
+//   window.ShadyDOM?.noPatch === true
+//     ? window.ShadyDOM!.wrap
+//     : (node: Node) => node;
+const wrap = (node: Node) => node; // viewding不再支持shadydom的兼容性处理。
 
 /**
  * Tests if a value is a primitive value.
