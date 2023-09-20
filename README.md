@@ -30,7 +30,7 @@ viewding/lit-lit forked from [lit/lit](https://github.com/lit/lit), forked之后
 
 ```
 pnpm install
-roolup -c roolup.config.js
+rollup -c rollup.config.js
 ```
 npm: [@viewding/lit-html](https://www.npmjs.com/package/@viewding/lit-html)
 
