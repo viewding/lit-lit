@@ -20,6 +20,20 @@ Lit is a simple library for building fast, lightweight web components.
 
 At Lit's core is a boilerplate-killing component base class that provides reactive state, scoped styles, and a declarative template system that's tiny, fast and expressive.
 
+### 关于viewding/lit-lit
+
+viewding/lit-lit forked from [lit/lit](https://github.com/lit/lit), forked之后，packages下仅保留了lit-html包。
+
+虽然lit-html已经有独立使用的包：[lit-html]（https://www.npmjs.com/package/lit-html）,但是在viewding不考虑使用其中的 ssr, 旧浏览器中webcomponent兼容性支持，同时计划添加l类似vue中的过渡功能。因而，单独fork出来定制一个viewding中专用的版本。
+
+打包，在viewding/lit-lit/packages/lit-html下执行下述命令：
+
+```
+pnpm install
+roolup -c roolup.config.js
+```
+npm: [@viewding/lit-html](https://www.npmjs.com/package/@viewding/lit-html)
+
 ### Documentation
 
 See the full documentation for Lit at [lit.dev](https://lit.dev).

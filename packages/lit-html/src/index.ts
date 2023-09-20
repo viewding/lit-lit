@@ -1,4 +1,7 @@
 export * from './lit-html.js'
+export * from './directive.js'
+export * from './directive-helpers.js'
+export * from './async-directive.js'
 
 export * from './directives/async-append.js'
 export * from './directives/async-replace.js'
